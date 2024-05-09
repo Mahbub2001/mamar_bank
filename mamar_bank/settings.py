@@ -99,25 +99,25 @@ WSGI_APPLICATION = 'mamar_bank.wsgi.application'
 
 
 ...
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': env("DB_NAME"),
-#         'USER': env("DB_USER"),
-#         'PASSWORD': env("DB_PASSWORD"),
-#         'HOST': env("DB_HOST"),
-#         'PORT': env("DB_PORT"),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
+    }
+}
 
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
-DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgres://mamarbank_9g2t_user:kC4pmwyZ36BPIzx6NUZJM3UxXbc8IDkg@dpg-coub5iun7f5s73b2ul80-a.oregon-postgres.render.com/mamarbank_9g2t',
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgres://mamarbank_9g2t_user:kC4pmwyZ36BPIzx6NUZJM3UxXbc8IDkg@dpg-coub5iun7f5s73b2ul80-a.oregon-postgres.render.com/mamarbank_9g2t',
+#     )
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
